@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ape.apesystem.mapper.ApeUserMapper">
-    <select id="getUserPage" resultType="apeUser">
+    <select id="getUserPage" resultType="com.ape.apesystem.domain.ApeUser">
         select
             u.id, u.dept_id, u.login_account, u.user_name,u.school,u.major,u.country,u.agree,u.age,u.birth,u.flair,u.address,u.work_date,
             u.email, u.avatar, u.tel, u.sex, u.status, u.del_flag,
