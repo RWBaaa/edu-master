@@ -1,3 +1,4 @@
+/*
 package com.ape.apeframework.filter;
 
 import com.alibaba.fastjson2.JSONObject;
@@ -16,15 +17,18 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+*/
 /**
  * @author xxxx
  * @version 1.0
  * @description: jwt过滤器
  * @date   9:59
- */
+ *//*
+
 public class JwtFilter extends BasicHttpAuthenticationFilter {
 
-    /**
+    */
+/**
     * @description: 执行登录认证
     * @param: request
     	response
@@ -32,7 +36,8 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
     * @return:
     * @author xxxx
     * @date:  2025/9/7 15:02
-    */
+    *//*
+
     @SneakyThrows
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
@@ -83,3 +88,4 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
     }
 
 }
+*/

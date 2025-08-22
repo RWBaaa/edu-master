@@ -3,6 +3,7 @@ package com.ape.apesystem.service.impl;
 import com.ape.apesystem.domain.ApeUser;
 import com.ape.apesystem.mapper.ApeUserMapper;
 import com.ape.apesystem.service.ApeUserService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

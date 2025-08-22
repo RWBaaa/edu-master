@@ -1,3 +1,4 @@
+/*
 package com.ape.apeframework.config;
 
 import com.ape.apeframework.filter.JwtFilter;
@@ -20,22 +21,26 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+*/
 /**
  * @author xxxx
  * @version 1.0
  * @description: shiro配置类
  * @date   9:14
- */
+ *//*
+
 @Configuration
 public class ShiroConfig {
 
-    /**
+    */
+/**
     * @description: 定义shiro过滤链
     * @param: securityManager
     * @return:
     * @author xxxx
     * @date:  2025/9/14 11:06
-    */
+    *//*
+
     @Bean("shiroFilter")
     public ShiroFilterFactoryBean shiroFilter(DefaultWebSecurityManager securityManager) {
         ShiroFilterFactoryBean shiroFilter = new ShiroFilterFactoryBean();
@@ -67,14 +72,16 @@ public class ShiroConfig {
         return shiroFilter;
     }
 
-    /**
+    */
+/**
     * @description: 注入realm进行安全管理
     * @param: shiroRealm
     	redisProperties
     * @return:
     * @author xxxx
     * @date:  2025/9/14 11:06
-    */
+    *//*
+
     @Bean("securityManager")
     public DefaultWebSecurityManager securityManager(ShiroRealm shiroRealm, RedisProperties redisProperties) {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
@@ -90,13 +97,15 @@ public class ShiroConfig {
         return securityManager;
     }
 
-    /**
+    */
+/**
     * @description: cacheManager 缓存 redis实现使用的是shiro-redis开源插件
     * @param: redisProperties
     * @return:
     * @author xxxx
     * @date:  2025/9/14 11:06
-    */
+    *//*
+
     public RedisCacheManager redisCacheManager(RedisProperties redisProperties) {
         RedisCacheManager redisCacheManager = new RedisCacheManager();
         redisCacheManager.setRedisManager(redisManager(redisProperties));
@@ -107,13 +116,15 @@ public class ShiroConfig {
         return redisCacheManager;
     }
 
-    /**
+    */
+/**
     * @description: * 配置shiro redisManager使用的是shiro-redis开源插件
     * @param: redisProperties
     * @return:
     * @author xxxx
     * @date:  2025/9/14 11:06
-    */
+    *//*
+
     @Bean
     public RedisManager redisManager(RedisProperties redisProperties) {
         RedisManager redisManager = new RedisManager();
@@ -132,13 +143,15 @@ public class ShiroConfig {
         return new LifecycleBeanPostProcessor();
     }
 
-    /**
+    */
+/**
     * @description: 高版本shrio增加配置，否则类里方法上有@RequiresPermissions注解的，会导致整个类下的接口无法访问404
     * @param:
     * @return:
     * @author xxxx
     * @date:  2025/9/14 11:07
-    */
+    *//*
+
     @Bean
     public DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator() {
         DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator = new DefaultAdvisorAutoProxyCreator();
@@ -154,3 +167,4 @@ public class ShiroConfig {
     }
 
 }
+*/

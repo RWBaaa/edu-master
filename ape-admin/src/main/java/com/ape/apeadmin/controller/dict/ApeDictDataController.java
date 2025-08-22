@@ -23,7 +23,7 @@ import java.util.List;
  */
 @Controller
 @ResponseBody
-@RequestMapping("dict")
+@RequestMapping("/apeDict")
 public class ApeDictDataController {
 
     @Autowired

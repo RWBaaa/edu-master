@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
  */
 @Controller
 @ResponseBody
-@RequestMapping("dept")
+@RequestMapping("/apeDept")
 public class ApeDeptController {
 
     @Autowired

@@ -37,7 +37,7 @@ import java.util.List;
  */
 @Controller
 @ResponseBody
-@RequestMapping("/user")
+@RequestMapping("/apeUser")
 public class ApeUserController {
 
     @Autowired

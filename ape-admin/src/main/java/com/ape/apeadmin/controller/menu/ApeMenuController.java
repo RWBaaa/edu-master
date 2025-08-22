@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
  */
 @Controller
 @ResponseBody
-@RequestMapping("menu")
+@RequestMapping("/apeMenu")
 public class ApeMenuController {
 
     @Autowired

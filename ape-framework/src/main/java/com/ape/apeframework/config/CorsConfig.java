@@ -1,25 +1,30 @@
+/*
 package com.ape.apeframework.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+*/
 /**
  * @author xxxx
  * @version 1.0
  * @description: 跨域
  * @date  2025/8/28 10:57
- */
+ *//*
+
 @Configuration
 public class CorsConfig {
 
-    /**
+    */
+/**
     * @description: 配置跨域
     * @param:
     * @return:
     * @author xxxx
     * @date:  2025/9/14 11:03
-    */
+    *//*
+
     @Bean
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -39,3 +44,4 @@ public class CorsConfig {
     }
 }
 
+*/

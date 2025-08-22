@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ape.apesystem.mapper.ApeMenuMapper">
-    <select id="getMenuByUser" resultType="apeMenu">
+    <select id="getMenuByUser" resultType="com.ape.apesystem.domain.ApeMenu">
         select
             distinct m.*
         from

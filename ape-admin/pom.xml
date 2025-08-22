@@ -143,7 +143,8 @@
 
                             <!-- 生成简化版本号的jar -->
                             <shadedArtifactAttached>true</shadedArtifactAttached>
-                            <shadedClassifierName>with-dependencies</shadedClassifierName>
+                            <!--                            <shadedClassifierName>with-dependencies-1</shadedClassifierName>-->
+                            <finalName>online-edu</finalName>
                         </configuration>
                     </execution>
                 </executions>

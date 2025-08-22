@@ -8,7 +8,7 @@ package com.ape.apecommon.utils;
  */
 
 import com.ape.apecommon.constant.Constants;
-import com.ape.apecommon.utils.spring.SpringUtils;
+import com.ape.apecommon.utils.spring.ApeSpringUtils;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -25,7 +25,7 @@ public class JwtUtil {
     */
     public static final long EXPIRE_TIME = 24 * 3 * 60 * 60 * 1000;
     public static final int days = 3;
-    private static StringRedisTemplate stringRedisTemplate = SpringUtils.getBean(StringRedisTemplate.class);
+    private static StringRedisTemplate stringRedisTemplate = ApeSpringUtils.getBean(StringRedisTemplate.class);
 
     /**
     * @description: 校验token是否正确

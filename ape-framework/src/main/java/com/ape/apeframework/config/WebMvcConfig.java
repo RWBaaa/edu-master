@@ -1,8 +1,12 @@
 package com.ape.apeframework.config;
 
+import com.ape.apeframework.interceptor.DataSourceInterceptor;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.util.pattern.PathPatternParser;
 
 /**
  * @author xxxx
@@ -32,4 +36,19 @@ public class WebMvcConfig implements WebMvcConfigurer {
         );
     }
 
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new DataSourceInterceptor())
+                .addPathPatterns("/edu/**");
+    }
+
+
+    @Override
+    public void configurePathMatch(PathMatchConfigurer configurer) {
+        // 只为ape-admin包下的controller添加/ape-admin前缀
+        configurer.addPathPrefix("/edu", clazz ->
+                clazz.getPackage() != null &&
+                        clazz.getPackage().getName().startsWith("com.ape.apeadmin")
+        );
+    }
 }

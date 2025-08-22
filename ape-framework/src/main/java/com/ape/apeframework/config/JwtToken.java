@@ -1,13 +1,16 @@
+/*
 package com.ape.apeframework.config;
 
 import org.apache.shiro.authc.AuthenticationToken;
 
+*/
 /**
  * @author xxxx
  * @version 1.0
  * @description: 自定义token
  * @date  2025/9/7 15:21
- */
+ *//*
+
 public class JwtToken implements AuthenticationToken {
 
     private static final long serialVersionUID = 1L;
@@ -29,3 +32,4 @@ public class JwtToken implements AuthenticationToken {
     }
 
 }
+*/

@@ -1,7 +1,6 @@
 package com.ape.apeframework.utils;
 
 import com.ape.apesystem.domain.ApeUser;
-import org.apache.shiro.SecurityUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -26,7 +25,8 @@ public class ShiroUtils {
     * @date:  2025/9/12 10:54
     */
     public static ApeUser getUserInfo(){
-        return (ApeUser) SecurityUtils.getSubject().getPrincipal();
+//        return (ApeUser) SecurityUtils.getSubject().getPrincipal();
+        return null;
     }
 
 }

@@ -1,3 +1,4 @@
+/*
 package com.ape.apeadmin.controller.gen;
 
 import com.alibaba.fastjson2.JSONObject;
@@ -25,12 +26,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+*/
 /**
  * @author xxxx
  * @version 1.0
  * @description: 代码生成controller
  * @date  2025/10/10 9:25
- */
+ *//*
+
 @Controller
 @ResponseBody
 @RequestMapping("genTable")
@@ -47,9 +50,11 @@ public class ApeGenTableController{
     @Autowired
     private GenUpdateCode genUpdateCode;
 
-    /**
+    */
+/**
      * 查询
-     */
+     *//*
+
     @Log(name = "查询代码生成列表", type = BusinessType.OTHER)
     @PostMapping("getGenPage")
     public Result getGenPage(@RequestBody ApeGenTable apeGenTable) {
@@ -64,7 +69,9 @@ public class ApeGenTableController{
         return Result.success(genTablePage);
     }
 
-    /** 根据id获取代码生成 */
+    */
+/** 根据id获取代码生成 *//*
+
     @Log(name = "根据id获取代码生成", type = BusinessType.OTHER)
     @GetMapping("getGenById")
     public Result getGenById(@RequestParam("id")String id) {
@@ -78,7 +85,9 @@ public class ApeGenTableController{
         return Result.success(gen);
     }
 
-    /** 保存代码生成 */
+    */
+/** 保存代码生成 *//*
+
     @Log(name = "保存代码生成", type = BusinessType.INSERT)
     @GetMapping("saveGen")
     @Transactional(rollbackFor = Exception.class)
@@ -154,7 +163,9 @@ public class ApeGenTableController{
         return Result.success();
     }
 
-    /** 编辑 */
+    */
+/** 编辑 *//*
+
     @Log(name = "编辑代码生成", type = BusinessType.UPDATE)
     @PostMapping("editGen")
     @Transactional(rollbackFor = Exception.class)
@@ -166,7 +177,9 @@ public class ApeGenTableController{
         return Result.success();
     }
 
-    /** 删除 */
+    */
+/** 删除 *//*
+
     @GetMapping("removeGen")
     @Transactional(rollbackFor = Exception.class)
     @Log(name = "删除代码生成", type = BusinessType.DELETE)
@@ -185,7 +198,9 @@ public class ApeGenTableController{
         }
     }
 
-    /** 同步生成表和字段 */
+    */
+/** 同步生成表和字段 *//*
+
     @GetMapping("syncTableAndColumns")
     @Log(name = "同步生成表和字段", type = BusinessType.UPDATE)
     @Transactional(rollbackFor = Exception.class)
@@ -253,7 +268,9 @@ public class ApeGenTableController{
         return Result.success();
     }
 
-    /** 预览 */
+    */
+/** 预览 *//*
+
     @GetMapping("preview")
     @Log(name = "预览", type = BusinessType.OTHER)
     @Transactional(rollbackFor = Exception.class)
@@ -304,7 +321,9 @@ public class ApeGenTableController{
         return Result.success(jsonObject);
     }
 
-    /** 获取数据库表 */
+    */
+/** 获取数据库表 *//*
+
     @PostMapping("getTables")
     @Log(name = "获取数据库表", type = BusinessType.OTHER)
     public Result getTables(@RequestBody ApeGenTable apeGenTable) {
@@ -313,3 +332,4 @@ public class ApeGenTableController{
     }
 
 }
+*/

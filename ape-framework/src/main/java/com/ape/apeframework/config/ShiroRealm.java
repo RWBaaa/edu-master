@@ -1,3 +1,4 @@
+/*
 package com.ape.apeframework.config;
 
 import com.ape.apecommon.constant.Constants;
@@ -20,12 +21,14 @@ import org.springframework.stereotype.Component;
 
 import java.util.Set;
 
+*/
 /**
  * @author xxxx
  * @version 1.0
  * @description: 自定义realm
  * @date  2025/9/7 14:38
- */
+ *//*
+
 @Component
 public class ShiroRealm extends AuthorizingRealm {
 
@@ -41,21 +44,25 @@ public class ShiroRealm extends AuthorizingRealm {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
-    /**
+    */
+/**
      * 必须重写此方法，不然Shiro会报错
-     */
+     *//*
+
     @Override
     public boolean supports(AuthenticationToken token) {
         return token instanceof JwtToken;
     }
 
-    /**
+    */
+/**
     * @description: 授权
     * @param: principals
     * @return:
     * @author xxxx
     * @date:  2025/9/7 15:11
-    */
+    *//*
+
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
@@ -77,13 +84,15 @@ public class ShiroRealm extends AuthorizingRealm {
         return simpleAuthorizationInfo;
     }
 
-    /**
+    */
+/**
     * @description: 认证
     * @param: token
     * @return:
     * @author xxxx
     * @date:  2025/9/7 15:11
-    */
+    *//*
+
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         String accessToken = (String) token.getPrincipal();
@@ -95,7 +104,8 @@ public class ShiroRealm extends AuthorizingRealm {
         return new SimpleAuthenticationInfo(tokenEntity, accessToken, getName());
     }
 
-    /**
+    */
+/**
     * @description: * 校验token的有效性
      *springboot2.3.+新增了一个配置项server.error.includeMessage，默认是NEVER，
      *因此默认是不是输出message的，只要开启就可以了,否则无法拿到shiro抛出异常信息message
@@ -103,7 +113,8 @@ public class ShiroRealm extends AuthorizingRealm {
     * @return:
     * @author xxxx
     * @date:  2025/9/14 11:12
-    */
+    *//*
+
     public ApeUser checkUserTokenIsEffect(String token) throws AuthenticationException {
         // 解密获得username，用于和数据库进行对比
         String userId = JwtUtil.getUserId(token);
@@ -127,7 +138,8 @@ public class ShiroRealm extends AuthorizingRealm {
         return loginUser;
     }
 
-    /**
+    */
+/**
     * @description: * JWTToken刷新生命周期 （实现： 用户在线操作不掉线功能）
      * 1、登录成功后将用户的JWT生成的Token作为k、v存储到cache缓存里面(这时候k、v值一样)，缓存有效期设置为Jwt有效时间的2倍
      * 2、当该用户再次请求时，通过JWTFilter层层校验之后会进入到doGetAuthenticationInfo进行身份验证
@@ -141,7 +153,8 @@ public class ShiroRealm extends AuthorizingRealm {
     * @return:
     * @author xxxx
     * @date:  2025/9/14 11:12
-    */
+    *//*
+
     public boolean jwtTokenRefresh(String token, String userId, String password) {
         //如果缓存中的token为空，直接返回失效异常
         String cacheToken = stringRedisTemplate.opsForValue().get(Constants.PREFIX_USER_TOKEN + userId);
@@ -155,16 +168,19 @@ public class ShiroRealm extends AuthorizingRealm {
         return false;
     }
 
-    /**
+    */
+/**
     * @description: 清除当前用户的权限认证缓存
     * @param: principals
     * @return:
     * @author xxxx
     * @date:  2025/9/7 15:10
-    */
+    *//*
+
     @Override
     public void clearCache(PrincipalCollection principals) {
         super.clearCache(principals);
     }
 
 }
+*/

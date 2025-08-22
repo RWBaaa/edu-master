@@ -1,3 +1,4 @@
+/*
 package com.ape.apeframework.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
@@ -5,7 +6,7 @@ import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties;
 import com.alibaba.druid.util.Utils;
 import com.ape.apecommon.enums.DataSourceType;
-import com.ape.apecommon.utils.spring.SpringUtils;
+import com.ape.apecommon.utils.spring.ApeSpringUtils;
 import com.ape.apeframework.datasource.DynamicDataSource;
 import com.ape.apeframework.properties.DruidProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -21,12 +22,14 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+*/
 /**
  * @author xxxx
  * @version 1.0
  * @description: 数据源配置类
  * @date  2025/8/10 16:06
- */
+ *//*
+
 @Configuration
 public class DruidConfig {
 
@@ -57,7 +60,8 @@ public class DruidConfig {
         return new DynamicDataSource(masterDataSource, targetDataSources);
     }
 
-    /**
+    */
+/**
     * @description: 设置数据源
     * @param: targetDataSources
     	sourceName
@@ -65,12 +69,13 @@ public class DruidConfig {
     * @return:
     * @author xxxx
     * @date:  2025/9/14 11:04
-    */
+    *//*
+
     public void setDataSource(Map<Object, Object> targetDataSources, String sourceName, String beanName)
     {
         try
         {
-            DataSource dataSource = SpringUtils.getBean(beanName);
+            DataSource dataSource = ApeSpringUtils.getBean(beanName);
             targetDataSources.put(sourceName, dataSource);
         }
         catch (Exception e)
@@ -78,13 +83,15 @@ public class DruidConfig {
         }
     }
 
-    /**
+    */
+/**
     * @description: 去除监控页面底部的广告
     * @param: properties
     * @return:
     * @author xxxx
     * @date:  2025/9/14 11:04
-    */
+    *//*
+
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Bean
     @ConditionalOnProperty(name = "spring.datasource.druid.statViewServlet.enabled", havingValue = "true")
@@ -129,3 +136,4 @@ public class DruidConfig {
     }
 
 }
+*/
