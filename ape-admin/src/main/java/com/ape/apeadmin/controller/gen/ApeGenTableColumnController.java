@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
+
 /**
  * @author xxxx
  * @version 1.0
@@ -17,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("genColumn")
 public class ApeGenTableColumnController {
 
-    @Autowired
+    @Resource
     private ApeGenTableColumnService apeGenTableColumnService;
 
 

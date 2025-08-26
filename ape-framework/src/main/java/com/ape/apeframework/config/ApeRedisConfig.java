@@ -1,3 +1,4 @@
+/*
 package com.ape.apeframework.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,18 +8,22 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
+*/
 /**
  * @author xxxx
  * @version 1.0
  * @description: redis配置类
  * @date   9:02
- */
+ *//*
+
 @Configuration
 public class ApeRedisConfig {
 
-    /**
+    */
+/**
      * 注入 RedisConnectionFactory
-     */
+     *//*
+
     @Autowired
     RedisConnectionFactory redisConnectionFactory;
 
@@ -29,14 +34,16 @@ public class ApeRedisConfig {
         return redisTemplate;
     }
 
-    /**
+    */
+/**
     * @description: 设置数据存入 redis 的序列化方式
     * @param: redisTemplate
     	factory
     * @return:
     * @author xxxx
     * @date:  2025/9/14 11:05
-    */
+    *//*
+
     private void setSerializer(RedisTemplate<String, Object> redisTemplate,
                                RedisConnectionFactory factory) {
         redisTemplate.setKeySerializer(new StringRedisSerializer());
@@ -47,3 +54,4 @@ public class ApeRedisConfig {
     }
 
 }
+*/

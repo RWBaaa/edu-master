@@ -40,4 +40,21 @@ public class BaseEntity implements Serializable {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date updateTime;
 
+   /**
+     * 页码，第几条
+     */
+   @TableField(exist = false)
+    private Integer pageNum = 1;
+
+    /**
+     * 数据总条数
+     */
+    @TableField(exist = false)
+    private Long total = 0L;
+
+    /**
+     * 总页数
+     */
+    @TableField(exist = false)
+    private Integer pages = 0;
 }

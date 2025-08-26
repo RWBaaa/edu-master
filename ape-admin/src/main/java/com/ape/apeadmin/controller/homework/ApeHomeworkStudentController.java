@@ -23,6 +23,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -38,11 +39,11 @@ import java.util.stream.Collectors;
 @RequestMapping("student")
 public class ApeHomeworkStudentController {
 
-    @Autowired
+    @Resource
     private ApeHomeworkStudentService apeHomeworkStudentService;
-    @Autowired
+    @Resource
     private ApeHomeworkService apeHomeworkService;
-    @Autowired
+    @Resource
     private ApeChapterService apeChapterService;
 
     /** 分页获取学生作业 */

@@ -18,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.management.relation.Role;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,11 +35,11 @@ import java.util.List;
 @RequestMapping("apeRole")
 public class ApeRoleController {
 
-    @Autowired
+    @Resource
     private ApeRoleService apeRoleService;
-    @Autowired
+    @Resource
     private ApeRoleMenuService apeRoleMenuService;
-    @Autowired
+    @Resource
     private ApeUserRoleService apeUserRoleService;
 
     /** 分页获取角色 */

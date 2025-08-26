@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 /**
  * @author xxxx
  * @version 1.0
@@ -23,7 +25,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("loginLog")
 public class ApeLoginLogController {
 
-    @Autowired
+    @Resource
     private ApeLoginLogService apeLoginLogService;
 
     /** 查询 */

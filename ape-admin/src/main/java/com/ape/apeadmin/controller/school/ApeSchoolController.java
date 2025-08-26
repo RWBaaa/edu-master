@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -27,7 +28,7 @@ import java.util.List;
 @RequestMapping("school")
 public class ApeSchoolController {
 
-    @Autowired
+    @Resource
     private ApeSchoolService apeSchoolService;
 
     /** 分页获取学校表 */

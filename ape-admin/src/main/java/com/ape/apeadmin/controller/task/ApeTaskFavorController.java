@@ -18,6 +18,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 /**
  * @author 超级管理员
  * @version 1.0
@@ -29,9 +31,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("favor")
 public class ApeTaskFavorController {
 
-    @Autowired
+    @Resource
     private ApeTaskFavorService apeTaskFavorService;
-    @Autowired
+    @Resource
     private ApeTaskService apeTaskService;
 
     /** 分页获取课程收藏 */

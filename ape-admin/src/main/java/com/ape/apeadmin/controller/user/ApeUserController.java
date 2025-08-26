@@ -23,6 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -40,11 +41,11 @@ import java.util.List;
 @RequestMapping("/apeUser")
 public class ApeUserController {
 
-    @Autowired
+    @Resource
     private ApeUserService apeUserService;
-    @Autowired
+    @Resource
     private ApeRoleService apeRoleService;
-    @Autowired
+    @Resource
     private ApeUserRoleService apeUserRoleService;
 
     /** 分页查询用户 */

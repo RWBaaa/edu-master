@@ -20,6 +20,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,13 +35,13 @@ import java.util.List;
 @RequestMapping("test")
 public class ApeTestController {
 
-    @Autowired
+    @Resource
     private ApeTestService apeTestService;
-    @Autowired
+    @Resource
     private ApeTaskService apeTaskService;
-    @Autowired
+    @Resource
     private ApeTaskStudentService apeTaskStudentService;
-    @Autowired
+    @Resource
     private ApeTestStudentService apeTestStudentService;
 
     /** 分页获取考试 */

@@ -22,7 +22,13 @@ public class ApeUserServiceImpl extends ServiceImpl<ApeUserMapper, ApeUser> impl
      */
     @Override
     public Page<ApeUser> getUserPage(ApeUser apeUser) {
-        Page<ApeUser> page = new Page<>(apeUser.getPageNumber(),apeUser.getPageSize());
+        Page<ApeUser> page = new Page<ApeUser>(apeUser.getPageNumber(),apeUser.getPageSize()){
+            @Override
+            public boolean optimizeCountSql() {
+                return true;
+            }
+        };
+        page.setCountId("getUserPage_mqCount");
         return baseMapper.getUserPage(page,apeUser);
     }
 }

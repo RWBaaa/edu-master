@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -29,7 +30,7 @@ import java.util.List;
 @RequestMapping("articleComment")
 public class ApeArticleCommentController {
 
-    @Autowired
+    @Resource
     private ApeArticleCommentService apeArticleCommentService;
 
     /** 分页获取笔记评论 */

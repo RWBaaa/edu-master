@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,15 +31,15 @@ import java.util.List;
 @RequestMapping("chapter")
 public class ApeChapterController {
 
-    @Autowired
+    @Resource
     private ApeChapterService apeChapterService;
-    @Autowired
+    @Resource
     private ApeTaskService apeTaskService;
-    @Autowired
+    @Resource
     private ApeHomeworkService apeHomeworkService;
-    @Autowired
+    @Resource
     private ApeChapterVideoService apeChapterVideoService;
-    @Autowired
+    @Resource
     private ApeHomeworkStudentService apeHomeworkStudentService;
 
     /** 分页获取章节 */

@@ -16,8 +16,7 @@ public class DataSourceInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 获取请求路径
         String requestURI = request.getRequestURI();
-        
-        // 如果请求路径包含ape-admin，则切换到ape-admin数据源
+
         if (requestURI.contains("/edu")) {
             DynamicDataSource.setDataSource("edu");
         } else {

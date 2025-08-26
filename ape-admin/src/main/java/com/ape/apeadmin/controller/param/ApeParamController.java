@@ -14,6 +14,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 /**
  * @author xxxx
  * @version 1.0
@@ -25,7 +27,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("param")
 public class ApeParamController {
 
-    @Autowired
+    @Resource
     private ApeParamService apeParamService;
 
     /** 分页获取参数列表 */

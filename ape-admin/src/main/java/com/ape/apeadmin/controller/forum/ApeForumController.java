@@ -16,6 +16,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 /**
  * @author 超级管理员
  * @version 1.0
@@ -27,7 +29,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("forum")
 public class ApeForumController {
 
-    @Autowired
+    @Resource
     private ApeForumService apeForumService;
 
     /** 分页获取论坛 */

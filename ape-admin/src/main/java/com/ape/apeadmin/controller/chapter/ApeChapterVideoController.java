@@ -16,6 +16,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 /**
  * @author 超级管理员
  * @version 1.0
@@ -27,7 +29,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("chapterVideo")
 public class ApeChapterVideoController {
 
-    @Autowired
+    @Resource
     private ApeChapterVideoService apeChapterVideoService;
 
     /** 分页获取章节视频是否观看 */

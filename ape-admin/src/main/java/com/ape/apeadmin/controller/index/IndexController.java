@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,13 +33,13 @@ import java.util.List;
 @RequestMapping("/index")
 public class IndexController {
 
-    @Autowired
+    @Resource
     private ApeUserService apeUserService;
-    @Autowired
+    @Resource
     private ApeTaskService apeTaskService;
-    @Autowired
+    @Resource
     private ApeTaskStudentService apeTaskStudentService;
-    @Autowired
+    @Resource
     private ApeAccountService apeAccountService;
 
     /** 获取首页统计数据 */
@@ -69,6 +70,8 @@ public class IndexController {
         QueryWrapper<ApeUser> queryWrapper = new QueryWrapper<>();
         queryWrapper.lambda().eq(ApeUser::getUserType,1).or()
                 .eq(ApeUser::getUserType,2);
+
+
         int count = apeUserService.count(queryWrapper);
         jsonObject.put("userNum",count);
         //教师数量
@@ -86,7 +89,8 @@ public class IndexController {
             //学生数量
             QueryWrapper<ApeTaskStudent> wrapper = new QueryWrapper<>();
             wrapper.lambda().eq(ApeTaskStudent::getTeacherId,userInfo.getId())
-                    .eq(ApeTaskStudent::getState,0).groupBy(ApeTaskStudent::getUserId);
+                    .eq(ApeTaskStudent::getState,0).groupBy(ApeTaskStudent::getUserId)
+                    .select(ApeTaskStudent::getUserId);
             List<ApeTaskStudent> taskStudentList = apeTaskStudentService.list(wrapper);
             jsonObject.put("studentNum",taskStudentList.size());
         }
@@ -111,7 +115,8 @@ public class IndexController {
         } else {
             QueryWrapper<ApeTaskStudent> wrapper = new QueryWrapper<>();
             wrapper.lambda().eq(ApeTaskStudent::getTeacherId,userInfo.getId())
-                    .eq(ApeTaskStudent::getState,0).groupBy(ApeTaskStudent::getUserId);
+                    .eq(ApeTaskStudent::getState,0).groupBy(ApeTaskStudent::getUserId)
+                    .select(ApeTaskStudent::getUserId);
             List<ApeTaskStudent> taskStudentList = apeTaskStudentService.list(wrapper);
             for (ApeTaskStudent apeTaskStudent : taskStudentList) {
                 ApeUser user = apeUserService.getById(apeTaskStudent.getUserId());

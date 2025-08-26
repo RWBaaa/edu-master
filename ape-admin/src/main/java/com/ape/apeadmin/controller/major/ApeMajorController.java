@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -28,7 +29,7 @@ import java.util.List;
 @RequestMapping("major")
 public class ApeMajorController {
 
-    @Autowired
+    @Resource
     private ApeMajorService apeMajorService;
 
     /** 分页获取专业表 */

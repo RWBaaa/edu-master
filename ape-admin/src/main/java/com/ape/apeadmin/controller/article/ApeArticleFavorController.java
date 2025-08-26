@@ -11,10 +11,10 @@ import com.ape.apesystem.service.ApeArticleService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 /**
  * @author 超级管理员
@@ -27,9 +27,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("favor")
 public class ApeArticleFavorController {
 
-    @Autowired
+    @Resource
     private ApeArticleFavorService apeArticleFavorService;
-    @Autowired
+    @Resource
     private ApeArticleService apeArticleService;
 
     /** 分页获取笔记收藏 */

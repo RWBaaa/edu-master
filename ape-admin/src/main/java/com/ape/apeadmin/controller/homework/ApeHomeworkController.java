@@ -16,6 +16,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 /**
  * @author 超级管理员
  * @version 1.0
@@ -27,9 +29,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("homework")
 public class ApeHomeworkController {
 
-    @Autowired
+    @Resource
     private ApeHomeworkService apeHomeworkService;
-    @Autowired
+    @Resource
     private ApeChapterService apeChapterService;
 
     /** 分页获取作业 */

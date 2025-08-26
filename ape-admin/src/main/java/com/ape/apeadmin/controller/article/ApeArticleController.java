@@ -19,6 +19,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,13 +34,13 @@ import java.util.List;
 @RequestMapping("article")
 public class ApeArticleController {
 
-    @Autowired
+    @Resource
     private ApeArticleService apeArticleService;
-    @Autowired
+    @Resource
     private ApeTaskService apeTaskService;
-    @Autowired
+    @Resource
     private ApeArticleFavorService apeArticleFavorService;
-    @Autowired
+    @Resource
     private ApeArticleCommentService apeArticleCommentService;
 
     /** 分页获取笔记 */
